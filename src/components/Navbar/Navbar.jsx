@@ -3,7 +3,6 @@ import logo from "../../assets/images/gt_logo.png";
 import styles from "./navbar.module.css";
 import { Link, useLocation } from "react-router-dom";
 import { HiChevronDown } from "react-icons/hi";
-import { slide as Menu } from "react-burger-menu";
 import { Twirl as Hamburger } from "hamburger-react";
 import { FaTwitter } from "react-icons/fa";
 import { FaYoutube, FaInstagram, FaFacebookF } from "react-icons/fa6";
