@@ -1,24 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import { Routes, Route } from "react-router-dom";
+import { ChurchHistory, Contact, Homepage } from "./pages";
+import { Layout } from "./components";
+import { WeeklyProgrammes } from "./pages/Programmes";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route index element={<Homepage />} />
+          <Route path="/about/church-history" element={<ChurchHistory />} />
+
+          <Route
+            path="/programmes/weekly-programmes"
+            element={<WeeklyProgrammes />}
+          />
+          <Route path="/programmes/calendar" element={<WeeklyProgrammes />} />
+          <Route path="/contact-us" element={<Contact />} />
+        </Route>
+      </Routes>
+    </>
   );
 }
 
