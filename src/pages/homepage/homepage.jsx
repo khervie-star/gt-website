@@ -1,5 +1,10 @@
 import React from "react";
+import { Hero } from "./components";
 
 export const Homepage = () => {
-  return <div>Homepage</div>;
+  return (
+    <>
+      <Hero />
+    </>
+  );
 };
